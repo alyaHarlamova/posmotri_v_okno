@@ -10,6 +10,7 @@ html {
 
 .page {
   display: flex;
+  justify-content: center;
   align-items: center;
   inline-size: 1200px;
   block-size: 100%;
@@ -43,7 +44,7 @@ html {
 }
 
 .search-form__fieldset-title {
-  margin-bottom: 5px;
+  margin-block-end: 5px;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
@@ -70,10 +71,10 @@ html {
 
 .search-form__textfield {
   border: none;
-  border-top: 1px solid currentColor;
-  border-bottom: 1px solid currentColor;
+  border-block-start: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
   color: #fff;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -119,12 +120,11 @@ html {
 
 .content__list {
   position: relative;
-  height: 300px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   align-self: baseline;
+  height: 300px;
 }
 
 .content__list::-webkit-scrollbar {
@@ -133,7 +133,7 @@ html {
 }
 
 .content__details {
-  width: 399px;
+  inline-size: 399px;
   display: flex;
   flex-direction: column;
   gap: 21px;
@@ -143,20 +143,20 @@ html {
 .result {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  row-gap: 16px;
 }
 
 .result__video {
-  width: inherit;
-  height: inherit;
   -o-object-fit: cover;
   object-fit: cover;
+  inline-size: inherit;
+  block-size: inherit;
 }
 
 .result__video-container {
   position: relative;
-  width: 711px;
-  height: 386px;
+  inline-size: 711px;
+  block-size: 386px;
 }
 
 h1,
@@ -195,7 +195,7 @@ ol {
 
 .title {
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -315,5 +315,8 @@ ol {
 }
 
 .more-button {
-  inline-size: 100%;
+  margin-inline-start: 2px;
+  margin-block-end: 2px;
+  margin-inline-end: 2px;
+  inline-size: 98%;
 }
